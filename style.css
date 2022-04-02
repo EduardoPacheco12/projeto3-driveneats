@@ -38,16 +38,19 @@
     }
 
     /*Configurações do conteúdo da página*/
+    .selecionado{
+        border: 8px solid #32B72F;
+        box-sizing: border-box;
+      }
+
     .conteudo {
         margin-top: 120px;
         margin-bottom: 108px;
     }
 
     .conteudo .categoria {
-        background-color: yellow;
         margin-bottom: 27px;
-        overflow: hidden;
-        overflow-x: scroll;
+        
     }
 
     .titulo > p {
@@ -62,20 +65,142 @@
     }
 
     .opcoes {
-        background-color: slateblue;
         display: flex;
+        overflow: hidden;
+        overflow-x: scroll;
     }
 
     .opcoes div {
         background-color: #FFFFFF;
         box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
         border-radius: 9px;
-        margin-right: 16px;
+        margin-left: 16px;
         box-sizing: border-box;
-        width: 172px;
-        height: 216px;
-        box-sizing: border-box;
+        min-width: 172px;
     }
+
+    /*Primeira categoria: prato principal*/
+    .foto-comida {
+        width: 144px;
+        height: 87px;
+        margin-left: 14px;
+        margin-top: 18px;
+        border-radius: 4px;
+    }
+
+    .titulo-comida {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 14px;
+        margin-top: 8px;
+        color: #333333;
+    }
+
+    .descricao-comida {
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        margin-left: 14px;
+        margin-top: 4px;
+        color: #A6A6A6;
+    }
+
+    .preco-comida {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 14px;
+        margin-top: 5px;
+        margin-bottom: 13px;
+        color: #000000;
+    }
+
+    /*Segunda categoria: bebidas*/
+    .foto-bebida {
+        width: 144px;
+        height: 87px;
+        background-size: 100%;
+        margin-left: 14px;
+        margin-top: 18px;
+        border-radius: 4px;
+    }
+
+    .titulo-bebida {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 14px;
+        margin-top: 8px;
+        color: #333333;
+    }
+
+    .descricao-bebida {
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        margin-left: 14px;
+        margin-top: 4px;
+        color: #A6A6A6;
+    }
+
+    .preco-bebida {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 14px;
+        margin-top: 5px;
+        margin-bottom: 13px;
+        color: #000000;
+    }
+
+        /*Terceira categoria: sobremesa*/
+        .foto-sobremesa {
+            width: 144px;
+            height: 87px;
+            background-size: 100%;
+            margin-left: 14px;
+            margin-top: 18px;
+            border-radius: 4px;
+        }
+    
+        .titulo-sobremesa {
+            font-family: 'Roboto';
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            margin-left: 14px;
+            margin-top: 8px;
+            color: #333333;
+        }
+    
+        .descricao-sobremesa {
+            font-family: 'Roboto';
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+            margin-left: 14px;
+            margin-top: 4px;
+            color: #A6A6A6;
+        }
+    
+        .preco-sobremesa {
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            margin-left: 14px;
+            margin-top: 5px;
+            margin-bottom: 13px;
+            color: #000000;
+        }
+    
 
     /*Configurações da barra inferior da página*/
     .barra-inferior {
@@ -113,7 +238,7 @@
     .pedido-pronto {
         width: 364px;
         height: 61px;
-        background-color: #32B72F;;
+        background-color: #32B72F;
         border-radius: 50px;
         display: flex;
         justify-content: center;
@@ -135,4 +260,3 @@
     }
 
 }
-
