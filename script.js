@@ -61,5 +61,41 @@ function aparecerFinalizar() {
 
 // Finalizar pedido
 function finalizarPedido() {
-    alert("Tamo quase terminando :)");
+    let pratoAdicionado = document.querySelector(".selecionado .titulo-comida")
+    pratoAdicionado = pratoAdicionado.innerHTML
+    let bebidaAdicionada = document.querySelector(".selecionado .titulo-bebida")
+    bebidaAdicionada = bebidaAdicionada.innerHTML
+    let sobremesaAdicionada = document.querySelector(".selecionado .titulo-sobremesa")
+    sobremesaAdicionada = sobremesaAdicionada.innerHTML
+    somarValor();
+    const mensagemFinal =  `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoAdicionado}\n- Bebida: ${bebidaAdicionada}\n- Sobremesa: ${sobremesaAdicionada}\nTotal: R$ ${valorTotal}`;
+    const code= encodeURIComponent(mensagemFinal);
+    window.open(`https://wa.me/5564996023292?text=${code}`);
+}
+
+function somarValor() {
+    let valorPrato = document.querySelector(".selecionado .preco-comida");
+    valorPrato = valorPrato.innerHTML;
+    valorPrato = valorPrato.substr(3,4,5,6,7);
+    valorPrato = valorPrato.replace(",",".");
+    valorPrato = Number(valorPrato);
+    console.log(valorPrato);
+
+    let valorBebida = document.querySelector(".selecionado .preco-bebida");
+    valorBebida = valorBebida.innerHTML;
+    valorBebida = valorBebida.substr(3,4,5,6);
+    valorBebida = valorBebida.replace(",",".");
+    valorBebida = Number(valorBebida);
+    console.log(valorBebida);
+    
+    let valorSobremesa = document.querySelector(".selecionado .preco-sobremesa");
+    valorSobremesa = valorSobremesa.innerHTML;
+    valorSobremesa = valorSobremesa.substr(3,4,5,6,7);
+    valorSobremesa = valorSobremesa.replace(",",".");
+    valorSobremesa = Number(valorSobremesa);
+    console.log(valorSobremesa);
+
+    let valor = valorPrato + valorBebida + valorSobremesa;
+    valorTotal = valor.toFixed(2);
+    console.log(valorTotal);
 }
